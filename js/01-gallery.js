@@ -44,6 +44,12 @@ refs.galleryEl.addEventListener("click", onUserClick);
 function onUserClick(evt) {
   evt.preventDefault();
   //   console.log(evt.target.dataset.source);
+  // console.log(evt.currentTarget);
+  // console.dir(evt.target);
+
+  if (evt.target.nodeName !== "IMG") {
+    return;
+  }
 
   return basicLightbox
     .create(
